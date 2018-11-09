@@ -5,13 +5,13 @@ class Question:
 
 # questions for GenOne
 q1, q2 = Question("How many members were selected for the GenOne program?", "20"), Question("Which company worked with #YesWeCode for the GenOne initiative?", "infor")
-q3, q4 = Question("Who is the founder of #YesWeCode?", "Van Jones"), Question("What is the DreamCorps logo?", "dragon")
+q3, q4 = Question("Who is the founder of #YesWeCode?", "van jones"), Question("What is the DreamCorps logo?", "dragon")
 
 # questions for Linux
 q5 = Question("What animal is the mascot for Linux?", "penguin")
 q6 = Question("What is the command that tells the process to die gracefully?", "kill")
 q7 = Question("What is the command that changes file permissions?", "chmod")
-q8 = Question("Who is the founder of Linux?", "Linus Torvalds")
+q8 = Question("Who is the founder of Linux?", "linus torvalds")
 
 # questions for Python
 q9 = Question("What is an immutable array in Python?", "list")
@@ -69,16 +69,22 @@ while choice != "quit":
         for k in chosen_category.keys():
             print(k)
 
-        choice_val = int(input("Pick a value category: "))
+        choice_val = int(input("Pick a value: "))
         question = chosen_category[choice_val][0].ques
+        
 
+        print("Here is your question:")
         print(question)
-        ans = input("Enter answer: ")
+        ans = input("Enter your answer: ")
 
         if type(ans) is str:
             ans = ans.lower()
 
-        print(ans == str(chosen_category[choice_val][0].ans))
+        # print(ans == str(chosen_category[choice_val][0].ans))
+        if ans == str(chosen_category[choice_val][0].ans):
+            print("Your answer is correct!")
+        else:
+            print("Sorry, wrong answer.")
 
     else:
-        print("Hey not here")
+        print("Please choose from the given categories by typing exactly how it is shown. Type 'quit' if you're done playing")
