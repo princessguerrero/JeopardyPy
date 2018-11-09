@@ -1,29 +1,30 @@
 class Question:
-    def __init__(self, ques, ans):
+    def __init__(self, ques, ans, val):
         self.ques = ques
         self.ans = ans
+        self.val = val
 
 # questions for GenOne
-q1, q2 = Question("How many members were selected for the GenOne program?", "20"), Question("Which company worked with #YesWeCode for the GenOne initiative?", "infor")
-q3, q4 = Question("Who is the founder of #YesWeCode?", "van jones"), Question("What is the DreamCorps logo?", "dragon")
+q1, q2 = Question("How many members were selected for the GenOne program?", "20", 100), Question("Which company worked with #YesWeCode for the GenOne initiative?", "infor", 200)
+q3, q4 = Question("Who is the founder of #YesWeCode?", "van jones", 300), Question("What is the DreamCorps logo?", "dragon", 400)
 
 # questions for Linux
-q5 = Question("What animal is the mascot for Linux?", "penguin")
-q6 = Question("What is the command that tells the process to die gracefully?", "kill")
-q7 = Question("What is the command that changes file permissions?", "chmod")
-q8 = Question("Who is the founder of Linux?", "linus torvalds")
+q5 = Question("What animal is the mascot for Linux?", "penguin", 100)
+q6 = Question("What is the command that tells the process to die gracefully?", "kill", 200)
+q7 = Question("What is the command that changes file permissions?", "chmod", 300)
+q8 = Question("Who is the founder of Linux?", "linus torvalds", 400)
 
 # questions for Python
-q9 = Question("What is an immutable array in Python?", "list")
-q10 = Question("What keyword do you use to get a library?", "import")
-q11 = Question("What do you use to extract content from a website?", "web scraping")
-q12 = Question("What is the process of detecting and removing potential errors in your program?", "debug")
+q9 = Question("What is an immutable array in Python?", "list", 100)
+q10 = Question("What keyword do you use to get a library?", "import", 200)
+q11 = Question("What do you use to extract content from a website?", "web scraping", 300)
+q12 = Question("What is the process of detecting and removing potential errors in your program?", "debug", 400)
 
 # questions for Career Building
-q13 = Question("What is the best social platform to connect to professionals?", "linkedin")
-q14 = Question("What is infor's software that has educational training resources to learn more about their company?", "lms")
-q15 = Question("The process of developing contacts in one's career.", "networking")
-q16 = Question("What is the acronym for the research tool that was developed by Kenneth Thomas and Ralph Kilmann in the early 1970s?", "tki")
+q13 = Question("What is the best social platform to connect to professionals?", "linkedin", 100)
+q14 = Question("What is infor's software that has educational training resources to learn more about their company?", "lms", 200)
+q15 = Question("The process of developing contacts in one's career.", "networking", 300)
+q16 = Question("What is the acronym for the research tool that was developed by Kenneth Thomas and Ralph Kilmann in the early 1970s?", "tki", 400)
 
 
 my_hash = {
@@ -53,8 +54,9 @@ my_hash = {
     }
 }
 
-def startGame():
+def startGame(score):
     choice = ""
+    playerScore = score
 
 
     while choice != "quit":
@@ -73,34 +75,27 @@ def startGame():
             for k in chosen_category.keys():
                 print(k)
 
-            choice_val = int(input("Pick a value category: "))
+            choice_val = int(input("Pick a value: "))
             question = chosen_category[choice_val][0].ques
+        
 
-
+            print("Here is your question:")
+            print(question)
+            ans = input("Enter your answer: ")
 
             if type(ans) is str:
                 ans = ans.lower()
-                
-        choice_val = int(input("Pick a value: "))
-        question = chosen_category[choice_val][0].ques
-        
-
-        print("Here is your question:")
-        print(question)
-        ans = input("Enter your answer: ")
-
-
+        #Deindent
             print(ans == str(chosen_category[choice_val][0].ans))
 
-
-
-
         # print(ans == str(chosen_category[choice_val][0].ans))
-        if ans == str(chosen_category[choice_val][0].ans):
-            print("Your answer is correct!")
-        else:
-            print("Sorry, wrong answer.")
+            if ans == str(chosen_category[choice_val][0].ans):
+                print("Your answer is correct!")
+                playerScore = playerScore + chosen_category[choice_val][0].val
+                print("Your current score is {} ".format(playerScore))
+            else:
+                print("Sorry, wrong answer.")
 
-    else:
-        print("Please choose from the given categories by typing exactly how it is shown. Type 'quit' if you're done playing")
+        else:
+            print("Please choose from the given categories by typing exactly how it is shown. Type 'quit' if you're done playing")
 
