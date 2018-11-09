@@ -53,22 +53,34 @@ my_hash = {
     }
 }
 
-choice = ""
-while choice != "quit":
-    for k in my_hash.keys():
-        print(k)
+def startGame():
+    choice = ""
 
-    choice = input("Pick a category: ")
-    # choice = choice.lower()
-    
 
-    if choice in my_hash:
-        my_hash[choice]
-        chosen_category = my_hash[choice]
-
-        for k in chosen_category.keys():
+    while choice != "quit":
+        for k in my_hash.keys():
             print(k)
 
+
+        choice = input("Pick a category: ")
+        #choice = choice.lower()
+
+        #Logic 1: Allows  
+        if choice in my_hash:
+            my_hash[choice]
+            chosen_category = my_hash[choice]
+
+            for k in chosen_category.keys():
+                print(k)
+
+            choice_val = int(input("Pick a value category: "))
+            question = chosen_category[choice_val][0].ques
+
+
+
+            if type(ans) is str:
+                ans = ans.lower()
+                
         choice_val = int(input("Pick a value: "))
         question = chosen_category[choice_val][0].ques
         
@@ -77,8 +89,11 @@ while choice != "quit":
         print(question)
         ans = input("Enter your answer: ")
 
-        if type(ans) is str:
-            ans = ans.lower()
+
+            print(ans == str(chosen_category[choice_val][0].ans))
+
+
+
 
         # print(ans == str(chosen_category[choice_val][0].ans))
         if ans == str(chosen_category[choice_val][0].ans):
@@ -88,3 +103,4 @@ while choice != "quit":
 
     else:
         print("Please choose from the given categories by typing exactly how it is shown. Type 'quit' if you're done playing")
+
