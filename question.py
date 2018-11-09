@@ -53,31 +53,35 @@ my_hash = {
     }
 }
 
-choice = ""
-while choice != "quit":
-    for k in my_hash.keys():
-        print(k)
+def startGame():
+    choice = ""
 
-    choice = input("Pick a category: ")
-    choice = choice.lower()
-
-    if choice in my_hash:
-        my_hash[choice]
-        chosen_category = my_hash[choice]
-
-        for k in chosen_category.keys():
+    while choice != "quit":
+        for k in my_hash.keys():
             print(k)
 
-        choice_val = int(input("Pick a value category: "))
-        question = chosen_category[choice_val][0].ques
+        choice = input("Pick a category: ")
+        #choice = choice.lower()
 
-        print(question)
-        ans = input("Enter answer: ")
+        #Logic 1: Allows  
+        if choice in my_hash:
+            my_hash[choice]
+            chosen_category = my_hash[choice]
 
-        if type(ans) is str:
-            ans = ans.lower()
+            for k in chosen_category.keys():
+                print(k)
 
-        print(ans == str(chosen_category[choice_val][0].ans))
+            choice_val = int(input("Pick a value category: "))
+            question = chosen_category[choice_val][0].ques
 
-    else:
-        print("Hey not here")
+            print(question)
+            ans = input("Enter answer: ")
+
+            if type(ans) is str:
+                ans = ans.lower()
+
+            print(ans == str(chosen_category[choice_val][0].ans))
+
+        else:
+            print("Hey not here\n")
+
