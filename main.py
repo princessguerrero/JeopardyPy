@@ -2,8 +2,9 @@ import question
 from question import startGame
 
 class Player:
-	def __init__(self, playerName):
+	def __init__(self, playerName, playerScore):
 		self.playerName = playerName
+		self.playerScore = 0
 	
 	#def insertPlayer():
 
@@ -26,11 +27,11 @@ insertAns = input("[O]ne Player or [T]wo player: ")
 if insertAns == 'O' or insertAns == 'o':
 	print("You have choosen to play alone")
 	playerNombre = input("Insert your name: ")
-	player1 = Player(playerNombre)
+	player1 = Player(playerNombre, 0)
 	#player1.playerName = insert("What is your name? ")
 	print("Hello {}. Ready to play? ".format(player1.playerName))	
-
-	startGame()
+	print("You have a score of {} points".format(player1.playerScore))
+	startGame(player1.playerScore)
 
 elif insertAns =="T" or insertAns == 't':
 	print("Two players!")
