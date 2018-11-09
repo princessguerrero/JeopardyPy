@@ -59,7 +59,8 @@ while choice != "quit":
         print(k)
 
     choice = input("Pick a category: ")
-    choice = choice.lower()
+    # choice = choice.lower()
+    
 
     if choice in my_hash:
         my_hash[choice]
