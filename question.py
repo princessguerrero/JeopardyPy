@@ -95,10 +95,11 @@ def startGame(score):
                     print("\nCorrect!")
                     playerScore = playerScore + chosen_category[choice_val][0].val
                     print("\nCURRENT SCORE: {} \n".format(playerScore))
-            else:
-                print("Sorry, wrong answer.")
-                playerScore = playerScore - chosen_category[choice_val][0].val
-                print("CURRENT SCORE {} ".format(playerScore))
+           
+                else:
+                    print("\nSorry, wrong answer.\n")
+                    playerScore = playerScore - chosen_category[choice_val][0].val
+                    print("CURRENT SCORE {} \n".format(playerScore))
 
         else:
             print("\nPlease choose from the given categories by typing exactly how it is shown. Type 'quit' if you're done playing")
