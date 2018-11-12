@@ -23,15 +23,15 @@ print("        /\_/ /  __/ (_) | |_) | (_| | | | (_| | |_| |")
 print("        \___/ \___|\___/| .__/ \__,_|_|  \__,_|\__, |   ")
 print("                        |_|                    |___/ ")
 
-insertAns = input("[O]ne Player or [T]wo player: ")
+insertAns = input("[O]ne Player or [T]wo player:\n ")
 if insertAns == 'O' or insertAns == 'o':
 	print("You have choosen to play alone")
 	playerNombre = input("Insert your name: ")
 	player1 = Player(playerNombre, 0)
 	#player1.playerName = insert("What is your name? ")
-	print("Hello {}. Ready to play? ".format(player1.playerName))	
-	print("You have a score of {} points".format(player1.playerScore))
+	print("\nHello {}. Ready to play?\n ".format(player1.playerName))	
+	print("You have a score of {} points\n".format(player1.playerScore))
 	startGame(player1.playerScore)
 
 elif insertAns =="T" or insertAns == 't':
-	print("Two players!")
+	print("Two players coming soon!")
