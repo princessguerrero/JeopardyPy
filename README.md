@@ -1,10 +1,10 @@
 # Jeopardy Py Game
 
-(Insert Image)
+![](images/jeopardy1.png)
 
 ## Project Description
 
-A jeopardy game in a 4 by 4 dimensional trivial game. Includes 4 topics related to GenOne, python, linux, and career related topics/facts. These are sectioned from 100-400 level from easiest to hard. The goal is to make it a collaborative and interactive project for the class to participate in.
+A jeopardy game in a 4 by 4 dimensional trivial game. Includes 4 topics related to GenOne, python, linux, and career related topics/facts. These are sectioned from 100-400 level from easiest to hard. The goal is to make it a collaborative and interactive project for any class to participate in.
 
 ### Getting Started
 
@@ -15,8 +15,8 @@ Select the option
 
 ### Prerequisites
 
-There are no additional installation of packages or libraries required for this project. However, Python 3 must be installed in order to run this program. 
-Also need to make Py Inquirer 
+There are no additional installation of packages or libraries required for this project. However, Python 3 must be installed in order to run this program. To add
+
 
 ### Instructions
 
