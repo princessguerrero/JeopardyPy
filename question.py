@@ -1,5 +1,6 @@
 from basic import *
 from prettytable import PrettyTable
+from colorama import Fore, Back, Style
 
 class Question:
     def __init__(self, ques, ans, val, picked):
@@ -119,11 +120,12 @@ def startGame(players):
         print(question)
         ans = inputString("Enter your answer: ")
         if ans == str(chosen_category[choice_val][0].ans):
-            print("Correct!")
+            print(Fore.GREEN + "Correct!")
             current_player.score = current_player.score + chosen_category[choice_val][0].val
         else:
-            print("Sorry, wrong answer.")
+            print(Fore.RED + "Sorry, wrong answer.")
             current_player.score = current_player.score - chosen_category[choice_val][0].val
+        print(Style.RESET_ALL)
         print("CURRENT SCORE: {}".format(current_player.score))
     return players
 
