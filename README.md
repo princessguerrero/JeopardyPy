@@ -1,6 +1,6 @@
 # Jeopardy Py Game
 
-![](images/jeopardy1.png)
+![](images/jeopardy1.jpg)
 
 ## Project Description
 
@@ -18,7 +18,10 @@ Select the option
 There are no additional installation of packages or libraries required for this project. However, Python 3 must be installed in order to run this program. To add
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1e711683c38cb627414431997851ceef9fef46b7
 
 
 
