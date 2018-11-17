@@ -1,6 +1,6 @@
 # Jeopardy Py Game
 
-![](images/jeopardy1.jpg)
+![](images/jeopardy1.png)
 
 ## Project Description
 
