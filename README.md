@@ -9,21 +9,13 @@ A jeopardy game in a 4 by 4 dimensional trivial game. Includes 4 topics related 
 ### Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-git clone “url”
-Run the main.py file
-Select the option
+- git clone “url”
+- Run the main.py file by running the following command:  `python3 main.py`
+- Select the option
 
 ### Prerequisites
 
-There are no additional installation of packages or libraries required for this project. However, Python 3 must be installed in order to run this program. To add
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 1e711683c38cb627414431997851ceef9fef46b7
-
-
+There are no additional installation of packages or libraries required for this project aside from two important ones for this project. We are utilizing the `PrettyTable` Python library which is used to easily display data in a visual ASCII table format. As well as the `colorama` Python library which allows to color your terminal text to your choosing. All of these packages have been tested and compatible with version Python 3 which must be pre-installed in order to run this program. 
 
 
 
