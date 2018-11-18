@@ -17,5 +17,13 @@ These instructions will get you a copy of the project up and running on your loc
 
 There are no additional installation of packages or libraries required for this project aside from two important ones for this project. We are utilizing the `PrettyTable` Python library which is used to easily display data in a visual ASCII table format. As well as the `colorama` Python library which allows to color your terminal text to your choosing. All of these packages have been tested and compatible with version Python 3 which must be pre-installed in order to run this program. 
 
+## Contributors
+- [Sayem Shahrier](https://github.com/sshahrier)
+- [Princess Guerrero](https://github.com/princessguerrero)
+- [Joseph Huaynate](https://github.com/Etanyauh)
 
+## License & Copyright
 
+Copyright ©️ 2018. Sayem Shahrier. All Rights Reserved.
+<br>
+Licensed under the [MIT License](LICENSE).
