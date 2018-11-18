@@ -24,6 +24,6 @@ There are no additional installation of packages or libraries required for this 
 
 ## License & Copyright
 
-Copyright ©️ 2018. Sayem Shahrier. All Rights Reserved.
-<br>
 Licensed under the [MIT License](LICENSE).
+<br>
+Copyright ©️ 2018. Sayem Shahrier. All Rights Reserved.
