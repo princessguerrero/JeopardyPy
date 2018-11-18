@@ -9,7 +9,7 @@ A jeopardy game in a 4 by 4 dimensional trivial game. Includes 4 topics related 
 ### Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-- git clone “url”
+- git clone “https://github.com/sshahrier/JeopardyPy.git”
 - Run the main.py file by running the following command:  `python3 main.py`
 - Select the option
 
